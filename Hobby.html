@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <!-- Metadata dan tautan ke file CSS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobi Saya</title>
+    <link rel="stylesheet" href="Index.css">
+    <style>
+        .content-hobby {
+            margin-left: 250px;
+            padding: 20px;
+            padding-top: 150px;
+            display: grid;
+            grid-template-columns: 1fr; 
+            gap: 20px; 
+        }
+
+        .content-hobby > div {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-hobby h2 {
+            text-align: center;
+        }
+
+        .content-hobby video {
+            display: block;
+            margin: 20px auto; 
+        }
+
+        .content-hobby a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .content-hobby a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <canvas id="backgroundCanvas"></canvas>
+
+    <div class="navbar">
+        <img src="logo.png" alt="Logo" class="logo">
+        <div class="nav-links" style="display: flex; justify-content: center; width: 100%;">  
+            <h1>Hobi Saya</h1>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <div class="nav-links" style="flex-direction: column;">
+            <a href="Index.html">Home</a>
+            <a href="Profile.html">Profil</a>
+            <a href="Keluarga.html">Keluarga</a>
+        </div>
+    </div>
+
+    <!-- Konten Hobi -->
+    <div class="content-hobby">
+
+        <div>
+            <h3>1. Bermain Game</h3>
+            <p>Saya suka bermain berbagai macam video game, tetapi game favorit saya adalah <b>Warthunder</b>. Warthunder adalah game aksi PvP berbasis kendaraan di mana Anda dapat bermain sebagai tank, pesawat, dan kapal.</p>
+            <p>Anda dapat memilih 10 negara berbeda untuk dimainkan, tetapi saya lebih sering menggunakan Jepang karena kendaraan mereka lebih fokus pada mobilitas dan daya tembak.</p>
+            <iframe id="js_video_iframe" src="https://jumpshare.com/embed/SYvHrAlaYe8WecUAow9w" frameborder="0" width="640" height="400" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+            <p align="center">Video di atas adalah pertandingan yang saya rekam.</p>     
+            <p>Anda dapat menonton lebih banyak gameplay saya di 
+                <a href="https://www.youtube.com/@NaufleX" target="_blank">channel YouTube saya</a>!
+            </p>
+        </div>
+
+        <div>
+            <h3>2. Mendengarkan Musik</h3>
+            <p>Saya juga suka mendengarkan musik. Saya menyukai musik dari berbagai genre. Ini adalah beberapa lagu yang saya suka:</p>
+            <ul>
+                <li>
+                    <p>Lagu 1: Kendrick Lamar - squabble up</p>
+                    <audio controls>
+                        <source src="song1.mp3" type="audio/mpeg">
+                    </audio>
+                </li>
+                <li>
+                    <p>Lagu 2: Ado - Value</p>
+                    <audio controls>
+                        <source src="song2.mp3" type="audio/mpeg">
+                    </audio>
+                </li>
+                <li>
+                    <p>Lagu 3: Duran Duran - INVISIBLE</p>
+                    <audio controls>
+                        <source src="song3.mp3" type="audio/mpeg">
+                    </audio>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <h3>3. Membaca Manga/Komik</h3>
+            <p>Saya suka menjelajahi berbagai cerita dan gaya seni dalam manga dan komik.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

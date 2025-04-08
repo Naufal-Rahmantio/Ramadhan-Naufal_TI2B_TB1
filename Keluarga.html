@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Keluarga</title>
+    <link rel="stylesheet" href="Index.css">
+</head>
+<style>
+ .content-keluarga {
+    display: grid;
+    grid-template-columns: auto auto auto auto; 
+    gap: 20px;
+    position: fixed;
+    top: 150px; 
+    padding: 10px;
+    left: 26%;
+}
+
+.content-keluarga img {
+    height: 200px;
+    width: auto;
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px;
+}
+
+.content-keluarga p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f1f1;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.family-image {
+    grid-column: span 4; 
+    margin: 0 auto; 
+}
+</style>
+<body>
+    <canvas id="backgroundCanvas"></canvas>
+    <div class="navbar">
+        <img src="logo.png" alt="Logo" class="logo">
+        <div class="nav-links" style="position: relative; left: 49%;">  
+            <h1>Profil Keluarga</h1>
+        </div>
+    </div>
+
+    <div class="sidebar" style="height: 1565px ;">
+        <div class="nav-links" style="flex-direction: column;">
+            <a href="Index.html">Home</a>
+            <a href="Profile.html">Profil</a>
+            <a href="Hobby.html">Hobby</a>
+        </div>
+    </div>
+ 
+    <div class="content-keluarga">
+        <img src="image2.jpg" alt="Keluarga" class="family-image"> <!-- Dipindahkan ke dalam grid -->
+        <img src="Ayah.jpg" alt="Ayah"> 
+        <p align="center">Muharam Rahmantio <br>lahir tanggal :<br>8 Maret 1971</p>
+        <p align="center">Dian Rakhmadiany <br>lahir tanggal : <br>26 Agustus 1978</p>
+        <img src="Bunda.jpg" alt="Bunda">
+          
+        <img src="Pasha.jpg" alt="Pasha">
+        <p align="center">Radian Pasha Rahmantio <br>lahir tanggal : <br>10 Juli 2003</p>
+        <p align="center">Ramadhan Naufal Rahmantio <br>lahir tanggal : <br>7 November 2004</p>
+        <img src="Naufal.jpg" alt="Naufal">
+
+        <img src="Zara.jpg" alt="Zara"> 
+        <p align="center">Tanisha Zahara Inaya <br>lahir tanggal : <br>1 Desember 2007</p>
+        <p align="center">Sharliz Zahira Ifraya <br>lahir tanggal : <br>1 Desember 2007</p>
+        <img src="Zira.jpg" alt="Zira"> 
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

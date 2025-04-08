@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Diri</title>
+    <link rel="stylesheet" href="Index.css">
+</head>
+<style>
+.probox { 
+    border: 1px solid #ccc; 
+    padding: 20px; 
+    flex: 1; 
+    background: rgba(255, 255, 255, 0.8); 
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease-in-out;
+}
+</style>
+<body>
+    <canvas id="backgroundCanvas"></canvas>
+    <div class="navbar">
+        <img src="logo.png" alt="Logo" class="logo">
+        <div class="nav-links" style="position: relative; left: 50%;">  
+            <h1>Profil Saya</h1>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <div class="nav-links" style="flex-direction: column;">
+            <a href="Index.html">Home</a>
+            <a href="Keluarga.html">Keluarga</a>
+            <a href="Hobby.html">Hobby</a>
+        </div>
+    </div>
+
+    <div class="container profile-container">
+        <div class="grid">
+            <div class="probox">
+                <h2>Informasi Dasar</h2>
+                <table class="info-table">
+                    <tr>
+                        <th>Atribut</th>
+                        <th>Detail</th>
+                    </tr>
+                    <tr>
+                        <td>Nama</td>
+                        <td>Ramadhan Naufal Rahmantio</td>
+                    </tr>
+                    <tr>
+                        <td>Tanggal Lahir</td>
+                        <td>07 - 11 - 2004</td>
+                    </tr>
+                    <tr>
+                        <td>Pekerjaan</td>
+                        <td>Mahasiswa</td>
+                    </tr>
+                    <tr>
+                        <td>Lokasi</td>
+                        <td>Tangerang Selatan, Indonesia</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

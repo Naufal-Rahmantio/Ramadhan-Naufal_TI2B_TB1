@@ -1,0 +1,264 @@
+body { 
+    font-family: Arial, sans-serif; 
+    margin: 0; 
+    padding: 0; 
+    background-size: cover;
+    backdrop-filter: blur(10px);
+    height: 100%; /* Ensure the body takes up the full height of the page */
+}
+.navbar { 
+    background-color: rgba(189, 189, 189, 0.8); 
+    padding: 15px; 
+    position: fixed; 
+    width: 100%;
+    height: 60px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    transition: transform 0.3s ease-in-out;
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+    margin-left: -7%
+    
+}
+.nav-links a { 
+    margin: 0 15px; 
+    text-decoration: none; 
+    color: #000; 
+    font-weight: bold; 
+    transition: color 0.3s ease;
+    padding: 20px 10px; /* Add padding for spacing */
+    font-size: 20px;
+}
+.nav-links a:hover {
+    color: #ff4500;
+    background-color: rgba(255, 69, 0, 0.1); 
+    border-radius: 5px; 
+}
+
+.logo {
+    height: 80px;
+    margin-left: 3%;
+}
+.container { 
+    width: 80%; 
+    margin: auto; 
+    text-align: center; 
+    padding: 100px 20px 20px; 
+    animation: fadeIn 1.5s ease-in;
+    min-height: calc(100vh - 90px); /* Ensure the container pushes the page height */
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.grid { 
+    display: flex; 
+    justify-content: center; /* Center align the grid */
+    gap: 20px;
+    flex-wrap: nowrap; /* Prevent wrapping to keep in sync with the image bar */
+    overflow: hidden; /* Hide overflow for non-highlighted boxes */
+}
+.box { 
+    border: 1px solid #ccc; 
+    padding: 20px; 
+    width: 300px; /* Set a fixed width for all boxes */
+    height: 200px; /* Set a fixed height for all boxes */
+    background: rgba(255, 255, 255, 0.8); 
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0.3; /* Default blurred/unselected state */
+    pointer-events: auto; /* Ensure hover events are enabled */
+}
+
+.box:hover {
+    opacity: 1; /* Highlighted/selected state */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.sidebar {
+    position: absolute; /* Changed from fixed to absolute */
+    top: 90px;
+    left: 0;
+    width: 200px;
+    min-height: 100%; /* Ensure the sidebar adjusts to the content height */
+    height: auto; /* Allow height to grow with content */
+    background-color: rgba(189, 189, 189, 0.8);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    transition: width 0.3s ease-in-out;
+    box-sizing: border-box; /* Ensure padding doesn't affect height */
+}
+.image-box { 
+    background-color: rgba(255, 255, 255, 0.5); 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    backdrop-filter: blur(5px);
+}
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+.info-table th, .info-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+.info-table th {
+    background-color: rgba(189, 189, 189, 0.8);
+}
+.info-table tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.info-table tr:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.02);
+    transition: transform 0.3s ease-in-out;
+}
+.box-link {
+    color: inherit;
+    text-decoration: none;
+    pointer-events: auto; /* Enable clicking for boxes */
+}
+.box-link:hover {
+    color: inherit;
+}
+.box.active .box-link {
+    pointer-events: auto; /* Enable pointer events only for the active box */
+}
+.profile-container {
+    margin-left: 22%;
+    max-width: 930px;
+    width: 100%;
+  }
+.image-bar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.images {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.images img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease, opacity 0.5s ease, filter 0.5s ease;
+    opacity: 0.3; /* Default blurred/unselected state */
+    filter: blur(5px);
+    pointer-events: none; /* Disable clicking on images */
+}
+
+.images img.active {
+    opacity: 1; /* Highlighted/selected state */
+    filter: none;
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.images img:hover {
+    opacity: 1; /* Highlighted/selected state */
+    filter: none;
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.prev,
+.next {
+    margin: 0 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background: #0c0c0c;
+    color: #fff;
+    transition: background 0.3s ease;
+    position: absolute;
+    z-index: 10;
+}
+
+.prev:hover,
+.next:hover {
+    background: #ff4500;
+}
+
+.prev {
+    left: -100px;
+}
+
+.next {
+    right: -100px;
+}
+
+@media (max-width: 1200px) {
+    .sidebar {
+        width: 180px;
+    }
+}
+
+@media (max-width: 992px) {
+    .sidebar {
+        width: 160px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 140px;
+    }
+}
+
+@media (max-width: 576px) {
+    .sidebar {
+        width: 120px;
+    }
+}
+
+@media (max-width: 576px) {
+    .profile-container {
+        max-width: 300px;
+        position: relative;
+    }
+}
+
+@media (max-width: 1200px) {
+    .profile-container {
+        width: 180px;
+    }
+}
+
+@media (max-width: 992px) {
+    .profile-container {
+        width: 160px;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-container {
+        width: 140px;
+    }
+}
+
